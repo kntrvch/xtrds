@@ -1,0 +1,69 @@
+ion-header {
+  ion-toolbar {
+    ion-menu-button {
+      --color: #fff !important
+    }
+  }
+}
+
+ion-content {
+  --ion-background-color: url("/assets/images/dots.png"),
+    linear-gradient(180deg, #133b75 0%, #0c274f 100%);
+  #container {
+    text-align: center;
+    padding-top: 50px;
+    & > svg {
+      display: block;
+      margin: 0 auto 0;
+      max-width: 320px;
+    }
+  }
+}
+
+ion-footer {
+  text-align: center;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  ion-toolbar {
+    color: #fff;
+    opacity: 0.5;
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  &.header-md::after {
+    background-image: none;
+  }
+}
+
+ion-button {
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.3px;
+  --border-radius: 6px;
+  text-transform: initial;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --padding-start: 32px;
+  --padding-end: 32px;
+  svg {
+    margin-right: 5px !important;
+  }
+  &.discord-button {
+    --background: linear-gradient(0deg, #5865f2 0%, #5865f2 100%), #81edb9;
+    --box-shadow: 0px 5px 10px 0px rgba(0, 165, 234, 0.18);
+  }
+  &.email-button {
+    --border: 0.5px solid rgba(255, 255, 255, 0.2);
+    --background: #e2eaf1;
+    --box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.2);
+    color: #0B254D !important;
+  }
+}

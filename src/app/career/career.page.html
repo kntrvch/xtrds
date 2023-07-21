@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button *ngIf="mobileView"></ion-menu-button>
+    </ion-buttons>
+    <ion-title
+      ><a [routerLink]="'/'"
+        ><img src="/assets/images/logo.svg" alt="" /> Xtrades</a
+      ></ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col>
+        <div id="container">
+          <h1>We're Hiring!</h1>
+          <ng-container *ngIf="!mobileView">
+            <ion-segment color="primary" [(ngModel)]="positionIndex">
+              <ion-segment-button value="1" checked>
+                <ion-label
+                  >Film Editor and Creator for Trading Content</ion-label
+                >
+              </ion-segment-button>
+              <ion-segment-button value="2">
+                <ion-label>Full Stack Principal Software Developer</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="3">
+                <ion-label
+                  >Sr Principal Software Engineer - C++ Programmer</ion-label
+                >
+              </ion-segment-button>
+            </ion-segment>
+            <div [ngSwitch]="positionIndex">
+              <ion-card *ngSwitchCase="1">
+                <ion-card-header>
+                  <ion-card-title
+                    >Hiring a Film Editor and Creator for Trading
+                    Content</ion-card-title
+                  >
+                </ion-card-header>
+
+                <ion-card-content>
+                  <p>
+                    We're looking to increase our exposure on social media, by
+                    creating more content (specificallyYoutube Videos + shorts
+                    and Reels on Instagram)
+                  </p>
+                </ion-card-content>
+              </ion-card>
+              <ion-card *ngSwitchCase="2">
+                <ion-card-header>
+                  <ion-card-title
+                    >Hiring a Full Stack Principal Software
+                    Developer</ion-card-title
+                  >
+                </ion-card-header>
+
+                <ion-card-content>
+                  <p>
+                    We're looking to increase our exposure on social media, by
+                    creating more content (specificallyYoutube Videos + shorts
+                    and Reels on Instagram)
+                  </p>
+                </ion-card-content>
+              </ion-card>
+              <ion-card *ngSwitchCase="3">
+                <ion-card-header>
+                  <ion-card-title
+                    >Hiring a Sr Principal Software Engineer - C++
+                    Programmer</ion-card-title
+                  >
+                </ion-card-header>
+
+                <ion-card-content>
+                  <p>
+                    We're looking to increase our exposure on social media, by
+                    creating more content (specificallyYoutube Videos + shorts
+                    and Reels on Instagram)
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="mobileView">
+            <ion-accordion-group>
+              <ion-accordion value="first">
+                <ion-item slot="header" color="light">
+                  <ion-label
+                    >Film Editor and Creator for Trading Content</ion-label
+                  >
+                </ion-item>
+                <div class="ion-padding" slot="content">First Content</div>
+              </ion-accordion>
+              <ion-accordion value="second">
+                <ion-item slot="header" color="light">
+                  <ion-label>Full Stack Principal Software Developer</ion-label>
+                </ion-item>
+                <div class="ion-padding" slot="content">Second Content</div>
+              </ion-accordion>
+              <ion-accordion value="third">
+                <ion-item slot="header" color="light">
+                  <ion-label
+                    >Sr Principal Software Engineer - C++ Programmer</ion-label
+                  >
+                </ion-item>
+                <div class="ion-padding" slot="content">Third Content</div>
+              </ion-accordion>
+            </ion-accordion-group>
+          </ng-container>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

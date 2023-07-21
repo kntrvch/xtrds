@@ -16,7 +16,7 @@
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
-@import '@ionic/angular/css/display.css';
+@import "@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
@@ -24,3 +24,64 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+ion-header {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  ion-title {
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-family: 'DM Sans', sans-serif;
+      &:active,
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  ion-toolbar {
+    ion-menu-button {
+      --color: #59759E !important
+    }
+  }
+}
+
+ion-menu {
+  --background: linear-gradient(270deg, #133b75 0%, #0c274f 100%) !important;
+  ion-content {
+    --background: linear-gradient(270deg, #133b75 0%, #0c274f 100%) !important;
+    ion-list-header {
+      --background: linear-gradient(
+        270deg,
+        #133b75 0%,
+        #0c274f 100%
+      ) !important;
+      --color: #ffffff !important;
+    }
+    ion-list {
+      background: linear-gradient(270deg, #133b75 0%, #0c274f 100%) !important;
+      border-bottom: none !important;
+
+      ion-item {
+        --background: linear-gradient(
+          270deg,
+          #133b75 0%,
+          #0c274f 100%
+        ) !important;
+        --color: #ffffff !important;
+        ion-icon {
+          padding-right: 10px !important;
+        }
+      }
+    }
+  }
+}
+
+ion-segment {
+  display: block !important;
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}

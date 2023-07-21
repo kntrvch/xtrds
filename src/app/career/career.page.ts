@@ -1,12 +1,13 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
 
-import { Component } from '@angular/core';
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
+  selector: 'app-career',
+  templateUrl: './career.page.html',
+  styleUrls: ['./career.page.scss'],
 })
-export class AppComponent {
+export class CareerPage implements OnInit {
+  positionIndex = 1;
   mobileView = true;
 
   constructor(public breakpointObserver: BreakpointObserver) {}
