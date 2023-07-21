@@ -14,13 +14,11 @@ export class CareerPage implements OnInit {
 
   ngOnInit() {
     this.breakpointObserver
-      .observe(['(min-width: 500px)'])
+      .observe(['(min-width: 769px)'])
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
-          console.log('Viewport width is 500px or greater!');
           this.mobileView = false;
         } else {
-          console.log('Viewport width is less than 500px!');
           this.mobileView = true;
         }
       });
